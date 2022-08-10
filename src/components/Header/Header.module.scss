@@ -1,0 +1,98 @@
+@import "../../styles/variables.scss";
+
+.navbar {
+    border-bottom: 1px solid $color-gray-200 !important;
+    z-index: 2 !important;
+    background-color: white !important;
+    width: 100%;
+    height: 92px;
+}
+
+.logo {
+    margin: 0;
+    max-height: 90px;
+    cursor: pointer;
+}
+
+.content {
+    max-width: 1140px !important;
+}
+
+.navLinks {
+    font-weight: $font-semibold;
+    font-size: $font-body-normal;
+    color: $color-gray-600 !important;
+    &:hover{
+      color: $color-primary-300 !important;
+    }
+}
+
+.cart {
+    margin: auto 0;
+}
+.cartButton {
+  width: 150px;
+  display: inline-flex !important;
+  gap: 8px !important;
+  background-color: white !important;
+  color: $color-gray-600 !important;
+  border: none !important;
+  padding: 0.5rem !important;
+  font-weight: $font-semibold;
+  font-size: $font-body-normal;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.cart:hover {
+    .cartButton {
+      color: $color-primary-300 !important;
+      svg {
+        path {
+          fill: $color-primary-300 !important;
+        }
+      }
+    }
+  }
+  .cart:focus {
+    box-shadow: none !important;
+  }
+
+  .profileTitle {
+    color: $color-gray-600 !important;
+    background-color: white !important;
+    border: none !important;
+    font-weight: $font-semibold;
+    font-size: $font-body-normal;
+    padding: 0.48rem !important;
+    margin-left: 0.4rem !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    gap: 8px !important;
+    svg {
+        path {
+            fill: $color-gray-600 !important;
+        }
+    }
+  }
+  .profileTitle:focus {
+    box-shadow: none !important;
+  }
+  .profileTitle:hover {
+    color: $color-primary-300 !important;
+    svg {
+      path {
+        fill: $color-primary-300 !important;
+      }
+    }
+  }
+
+  .blueLogo {
+    margin: 5px;
+    path {
+      fill: $color-primary-300;
+    }
+  }

@@ -1,0 +1,29 @@
+@import "../../styles/variables.scss";
+
+
+.description{
+    margin-top: 30px;
+    .descriptionImage{
+
+    }
+    .descriptionRight{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        .descriptionText{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+            color: $color-gray-600;
+            font-size: $font-h5;
+            font-weight: $font-semibold;
+        }
+        .descriptionButton{
+            width: 40%;
+        }
+    }
+    
+}

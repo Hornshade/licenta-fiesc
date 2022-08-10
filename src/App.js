@@ -1,24 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+} from "react-router-dom";
+import {
+  About,
+  Cart,
+  Contact,
+  Home,
+  Login,
+  Payment,
+  Products,
+  Register,
+  Layout,
+} from "./pages";
+import ProtectedRoute from "./routes/ProtectedRoutes";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Router>
+      <Routes>
+        <Route
+          element={
+            <>
+              <Header />
+              <Layout>
+                <ProtectedRoute />
+              </Layout>
+            </>
+          }
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          {/* protected routes */}
+          <Route path="/cosul-meu" element={<Cart />} />
+        </Route>
+        <Route
+          element={
+            <>
+              <Header />
+              <Layout>
+                <Outlet />
+              </Layout>
+            </>
+          }
+        >
+          {/* public routes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/despre-noi" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/plata" element={<Payment />} />
+          <Route path="/produse" element={<Products />} />
+        </Route>
+
+        {/* onboarding routes */}
+        <Route path="/logare" element={<Login />} />
+        <Route path="/inregistrare" element={<Register />} />
+      </Routes>
+    </Router>
   );
 }
 
