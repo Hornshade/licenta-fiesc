@@ -1,1 +1,45 @@
 @import "../../styles/variables.scss";
+
+
+.login{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    height: 100%;
+    width: 100%;
+    .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        .form{
+            width: 35%;
+            color: $color-gray-600;
+            font-size: $font-body-normal;
+            font-weight: $font-semibold;
+        }
+        h1{
+            color: $color-black;
+            font-size: $font-h2;
+            font-weight: $font-bold;
+        }
+        p{
+            color: $color-gray-300;
+            font-size: $font-body-normal;
+            font-weight: $font-semibold;
+        }
+        .extra{
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            margin-top: 20px;
+            .extraLink{
+                color: $color-primary-400;
+                font-size: $font-body-normal;
+                font-weight: $font-semibold;
+                cursor: pointer;
+            }
+        }
+    }
+}

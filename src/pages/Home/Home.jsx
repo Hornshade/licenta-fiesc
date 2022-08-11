@@ -2,8 +2,10 @@ import React from "react";
 import styles from "./Home.module.scss";
 import { Carousel, Col, Row } from "react-bootstrap";
 import ButtonComp from "../../components/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div style={{ height: "100%" }}>
       {/* Carousel for home page  */}
@@ -54,7 +56,11 @@ const Home = () => {
           </Col>
           <Col md={{ span: 7, offset: 1 }} className={styles.descriptionRight}>
             <div className={styles.descriptionButton}>
-              <ButtonComp variant="primary" label="La cumparaturi" />
+              <ButtonComp
+                variant="primary"
+                label="La cumparaturi"
+                onClick={() => navigate("/produse")}
+              />
             </div>
             <h5 className={styles.descriptionText}>
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

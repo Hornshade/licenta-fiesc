@@ -69,7 +69,7 @@ const Header = () => {
                   Hello!
                 </Dropdown.ItemText>
                 <Dropdown.Item
-                  onClick={() => navigate("/")}
+                  onClick={() => navigate("/logare")}
                   className={styles.profileOption}
                 >
                   <Person className={styles.blueLogo} />

@@ -1,1 +1,32 @@
 @import "../../styles/variables.scss";
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    gap: 20px;
+    .text{
+        .title{
+            color: $color-black;
+            font-size: $font-h1;
+            font-weight: $font-bold;
+        }
+        h2{
+            color: $color-gray-600;
+            font-size: $font-h3;
+            font-weight: $font-medium;
+        }
+        .contactMethods{
+            h3{
+                color: $color-black;
+                font-size: $font-h3;
+                font-weight: $font-semibold;
+            }
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+    }
+}
