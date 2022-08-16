@@ -61,3 +61,14 @@ meter {
 :where([draggable="true"]) {
   -webkit-user-drag: element;
 }
+
+.nav-tabs .nav-link{
+  color: #ffba27;
+  font-size: $font-body-normal;
+  font-weight: $font-semibold;
+  &:hover {
+  color: #ffba27;
+  }
+}
+
+

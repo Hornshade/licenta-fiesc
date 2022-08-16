@@ -1,1 +1,10 @@
 @import "../../styles/variables.scss";
+
+.products{
+    margin-top: 30px;
+}
+.miere {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+}
