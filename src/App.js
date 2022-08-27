@@ -56,7 +56,7 @@ function App() {
         </Route>
 
         {/* onboarding routes */}
-        <Route path="/logare" element={<Login />} />
+        <Route path="/autentificare" element={<Login />} />
         <Route path="/inregistrare" element={<Register />} />
       </Routes>
     </Router>

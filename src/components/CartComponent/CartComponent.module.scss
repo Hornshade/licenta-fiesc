@@ -1,0 +1,67 @@
+@import "../../styles/variables.scss";
+
+.item {
+  border: 1px solid $color-gray-50;
+  border-radius: 12px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  .left {
+    .name {
+      color: $color-gray-600;
+      font-size: $font-h4;
+      font-weight: $font-semibold;
+      margin-bottom: 15px;
+    }
+    .price {
+      color: $color-gray-600;
+      font-size: $font-body-normal;
+      font-weight: $font-semibold;
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: 30px;
+    .label {
+      color: $color-gray-500;
+      font-size: $font-body-normal;
+      font-weight: $font-semibold;
+    }
+    .input {
+      width: 70px;
+      border: 1px solid $color-gray-300;
+      color: $color-black;
+      font-size: $font-body-normal;
+      font-weight: $font-semibold;
+      padding: 5px;
+      border-radius: 8px;
+    }
+    .save {
+      background-color: $color-primary-400;
+      color: $color-white;
+      text-align: center;
+      border-radius: 12px;
+      margin-top: 5px;
+      height: 30px;
+      font-size: $font-button;
+      font-weight: $font-semibold;
+    }
+    .remove {
+      background-color: $color-alert-300;
+      color: $color-white;
+      font-size: $font-button;
+      font-weight: $font-semibold;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      text-align: center;
+      top: -10px;
+      right: -40px;
+    }
+  }
+}

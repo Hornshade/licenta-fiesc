@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import styles from "./Login.module.scss";
@@ -8,6 +8,13 @@ import Button from "../../components/Button/Button";
 
 const Login = () => {
   const navigate = useNavigate();
+
+  const [email, setEmail] = useState();
+
+  const login = () => {
+    localStorage.setItem("email", email);
+    navigate("/");
+  };
   return (
     <div className={styles.login}>
       <div className={styles.left}>
@@ -20,7 +27,11 @@ const Login = () => {
           <Form>
             <Form.Group className="mb-4" controlId="formBasicEmail">
               <Form.Label>Adresa de email</Form.Label>
-              <Form.Control type="email" placeholder="Introdu email" />
+              <Form.Control
+                type="email"
+                placeholder="Introdu email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </Form.Group>
             <Form.Group className="mb-4" controlId="formBasicPassword">
               <Form.Label>Parolă</Form.Label>
@@ -30,6 +41,7 @@ const Login = () => {
               variant="primary"
               type="submit"
               label="Loghează-te"
+              onClick={() => login()}
             ></Button>
           </Form>
         </div>

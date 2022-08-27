@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import styles from "./Header.module.scss";
 import Container from "react-bootstrap/Container";
@@ -17,6 +17,17 @@ import Button from "react-bootstrap/Button";
 
 const Header = () => {
   const navigate = useNavigate();
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+    setUser(localStorage.getItem("email"));
+  }, []);
+
+  const logout = () => {
+    localStorage.clear();
+    navigate("/");
+    window.location.reload();
+  };
   return (
     <Navbar collapseOnSelect expand="xl" className={styles.navbar} sticky="top">
       <Container className={styles.content}>
@@ -61,7 +72,7 @@ const Header = () => {
             <Dropdown>
               <Dropdown.Toggle className={styles.profileTitle}>
                 <Person />
-                My Profile
+                {user ? user : "My Profile"}
               </Dropdown.Toggle>
 
               <Dropdown.Menu className={styles.dropMenu}>
@@ -98,7 +109,10 @@ const Header = () => {
                 </Dropdown.Item>
                 <Dropdown.Divider />
 
-                <Dropdown.Item className={styles.profileOption}>
+                <Dropdown.Item
+                  className={styles.profileOption}
+                  onClick={() => logout()}
+                >
                   <Logout className={styles.logout} />
                   Logout
                 </Dropdown.Item>

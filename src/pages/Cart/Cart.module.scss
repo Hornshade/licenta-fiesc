@@ -1,1 +1,15 @@
 @import "../../styles/variables.scss";
+
+.cart {
+  .title {
+    color: $color-black;
+    font-size: $font-h3;
+    font-weight: $font-bold;
+    margin: 20px 5px;
+  }
+  .items {
+    border: 1px solid $color-gray-100;
+    border-radius: 12px;
+    padding: 20px;
+  }
+}
